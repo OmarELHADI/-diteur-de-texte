@@ -20,8 +20,19 @@ public class Document {
         this.texte += texte;
     }
 
+    public void remplacer(int debut, int fin, String remplacement) {
+        if(!remplacement.isEmpty()) {
+            String partieGauche = texte.substring(0, debut);
+            String partieDroite = texte.substring(fin + 1);
+            texte = partieGauche + remplacement + partieDroite;
+        } else {
+            setTexte(texte.substring(fin + 1));
+        }
+    }
+
     @Override
     public String toString() {
         return this.texte;
     }
+
 }
