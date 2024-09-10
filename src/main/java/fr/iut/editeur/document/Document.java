@@ -22,6 +22,11 @@ public class Document {
 
     public void effacer(int debut, int fin) {
         remplacer(debut,fin,"");
+        texte+="prout";
+    }
+
+    public void clear(){
+        setTexte("");
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
