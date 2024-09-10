@@ -41,6 +41,9 @@ public class Document {
         remplacer(debut, fin-1, partie);
     }
 
+    public void inserer(int debut,String remplacement){
+        remplacer(debut,debut,remplacement+texte.substring(debut));
+    }
     @Override
     public String toString() {
         return this.texte;
