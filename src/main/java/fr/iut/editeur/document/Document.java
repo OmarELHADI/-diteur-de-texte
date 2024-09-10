@@ -30,6 +30,12 @@ public class Document {
         }
     }
 
+    public void majuscules(int debut, int fin) {
+        String partie = texte.substring(debut, fin);
+        partie =partie.toUpperCase();
+        remplacer(debut, fin-1, partie);
+    }
+
     @Override
     public String toString() {
         return this.texte;
