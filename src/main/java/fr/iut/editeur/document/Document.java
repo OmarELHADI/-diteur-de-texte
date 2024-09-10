@@ -22,7 +22,6 @@ public class Document {
 
     public void effacer(int debut, int fin) {
         remplacer(debut,fin,"");
-        texte+="prout";
     }
 
     public void clear(){
@@ -30,13 +29,10 @@ public class Document {
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
-        if(!remplacement.isEmpty()) {
             String partieGauche = texte.substring(0, debut);
             String partieDroite = texte.substring(fin + 1);
             texte = partieGauche + remplacement + partieDroite;
-        } else {
-            setTexte(texte.substring(fin + 1));
-        }
+
     }
 
     public void majuscules(int debut, int fin) {
