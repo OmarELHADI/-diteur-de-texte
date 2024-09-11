@@ -2,22 +2,22 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String contentDocument;
+    private String texteDocument;
 
     public Document() {
-        this.contentDocument = "";
+        this.texteDocument = "";
     }
 	
-    public String getContentDocument() {
-        return contentDocument;
+    public String getTexteDocument() {
+        return texteDocument;
     }
 
-    public void setContentDocument(String contentDocument) {
-        this.contentDocument = contentDocument;
+    public void setTexteDocument(String texteDocument) {
+        this.texteDocument = texteDocument;
     }
 
     public void ajouter(String texte) {
-        this.contentDocument += texte;
+        this.texteDocument += texte;
     }
 
     public void effacer(int debut, int fin) {
@@ -25,34 +25,34 @@ public class Document {
     }
 
     public void clear(){
-        setContentDocument("");
+        setTexteDocument("");
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
-            String partieGauche = contentDocument.substring(0, debut);
-            String partieDroite = contentDocument.substring(fin + 1);
-            contentDocument = partieGauche + remplacement + partieDroite;
+            String partieGauche = texteDocument.substring(0, debut);
+            String partieDroite = texteDocument.substring(fin + 1);
+            texteDocument = partieGauche + remplacement + partieDroite;
 
     }
 
     public void majuscules(int debut, int fin) {
-        String partie = contentDocument.substring(debut, fin);
+        String partie = texteDocument.substring(debut, fin);
         partie =partie.toUpperCase();
         remplacer(debut, fin-1, partie);
     }
 
     public void minuscule(int debut, int fin) {
-        String partie = contentDocument.substring(debut, fin);
+        String partie = texteDocument.substring(debut, fin);
         partie =partie.toLowerCase();
         remplacer(debut, fin-1, partie);
     }
 
     public void inserer(int debut,String remplacement){
-        remplacer(debut,debut,remplacement+ contentDocument.substring(debut));
+        remplacer(debut,debut,remplacement+ texteDocument.substring(debut));
     }
     @Override
     public String toString() {
-        return this.contentDocument;
+        return this.texteDocument;
     }
 
 }
