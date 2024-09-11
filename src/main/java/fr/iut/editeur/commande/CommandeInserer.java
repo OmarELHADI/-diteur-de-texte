@@ -16,4 +16,9 @@ public class CommandeInserer extends CommandeDocument {
         this.document.inserer(Integer.parseInt(parameters[1]),parameters[2]);
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Insère le texte fourni à partir du numéro de la lettre fourni en paramètre.";
+    }
 }
