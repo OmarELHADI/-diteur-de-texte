@@ -18,4 +18,9 @@ public class CommandeEffacer extends CommandeDocument {
         this.document.effacer(debut,fin);
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Efface le texte entre le début et la fin fourni dans les paramètres.";
+    }
 }

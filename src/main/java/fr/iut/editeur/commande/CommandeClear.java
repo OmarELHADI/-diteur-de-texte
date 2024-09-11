@@ -16,4 +16,9 @@ public class CommandeClear extends CommandeDocument {
         this.document.clear();
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Efface l'entiereté du texte ajouté auparavant";
+    }
 }

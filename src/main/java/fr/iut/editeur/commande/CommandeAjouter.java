@@ -20,4 +20,9 @@ public class CommandeAjouter extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Ajoute le texte fourni dans le paramètre après le point virgule.";
+    }
+
 }
