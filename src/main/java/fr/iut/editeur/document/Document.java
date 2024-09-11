@@ -2,22 +2,22 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String contentDocument;
 
     public Document() {
-        this.texte = "";
+        this.contentDocument = "";
     }
 	
-    public String getTexte() {
-        return texte;
+    public String getContentDocument() {
+        return contentDocument;
     }
 
-    public void setTexte(String texte) {
-        this.texte = texte;
+    public void setContentDocument(String contentDocument) {
+        this.contentDocument = contentDocument;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.contentDocument += texte;
     }
 
     public void effacer(int debut, int fin) {
@@ -25,34 +25,34 @@ public class Document {
     }
 
     public void clear(){
-        setTexte("");
+        setContentDocument("");
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
-            String partieGauche = texte.substring(0, debut);
-            String partieDroite = texte.substring(fin + 1);
-            texte = partieGauche + remplacement + partieDroite;
+            String partieGauche = contentDocument.substring(0, debut);
+            String partieDroite = contentDocument.substring(fin + 1);
+            contentDocument = partieGauche + remplacement + partieDroite;
 
     }
 
     public void majuscules(int debut, int fin) {
-        String partie = texte.substring(debut, fin);
+        String partie = contentDocument.substring(debut, fin);
         partie =partie.toUpperCase();
         remplacer(debut, fin-1, partie);
     }
 
     public void minuscule(int debut, int fin) {
-        String partie = texte.substring(debut, fin);
+        String partie = contentDocument.substring(debut, fin);
         partie =partie.toLowerCase();
         remplacer(debut, fin-1, partie);
     }
 
     public void inserer(int debut,String remplacement){
-        remplacer(debut,debut,remplacement+texte.substring(debut));
+        remplacer(debut,debut,remplacement+ contentDocument.substring(debut));
     }
     @Override
     public String toString() {
-        return this.texte;
+        return this.contentDocument;
     }
 
 }
