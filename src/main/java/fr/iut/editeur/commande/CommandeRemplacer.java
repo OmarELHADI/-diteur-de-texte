@@ -25,4 +25,9 @@ public class CommandeRemplacer extends CommandeDocument {
         this.document.remplacer(debut,fin,chaine);
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Remplace le texte fourni dans le paramètre 3 entre les lettres dont les positions sont saisi dans les 2 premiers paramètres..";
+    }
 }

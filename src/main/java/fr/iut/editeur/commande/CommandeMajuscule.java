@@ -21,4 +21,9 @@ public class CommandeMajuscule extends CommandeDocument {
         this.document.majuscules(debut,fin);
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Met en majuscule le texte entre les lettres dont la position est fournie dans les paramètres saisies";
+    }
 }
