@@ -21,4 +21,9 @@ public class CommandeMinuscule extends CommandeDocument {
         this.document.minuscule(debut,fin);
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Met en minuscule le texte entre le début et la fin saisi en paramètres";
+    }
 }
